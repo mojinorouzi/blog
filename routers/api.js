@@ -2,6 +2,7 @@ const express = require("express");
 const models = require("../models");
 const upload = require("../multer.js");
 var slug = require("slug");
+const verify = require('./verifyToken')
 
 const routes = express.Router();
 
@@ -110,7 +111,7 @@ routes.delete("/posts/:titlepost", upload.none(), async (req, res) => {
 });
 
 //tags.........................................................................................................................................
-routes.get("/tags", async (req, res) => {
+routes.get("/tags",verify, async (req, res) => {
   try {
     let gettag = await models.Tags.findAll({
       include: [{ model: models.Posts, attributes: ["title"] }],
