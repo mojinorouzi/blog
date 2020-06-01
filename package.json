@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "blog.js",
+  "scripts": {
+    "test": "blog",
+    "start": "nodemon blog"
+  },
+  "author": "blog",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4",
+    "pg": "^8.2.1",
+    "sequelize": "^5.21.11",
+    "slug": "^3.3.0"
+  }
+}
